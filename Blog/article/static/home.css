@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+  color: #22223b;
+}
+.header {
+  width: 100%;
+  background: #4f8cff;
+  color: #fff;
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+.subtitle {
+  font-size: 1.2rem;
+  color: #e0e7ff;
+}
+.blog-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.blog-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(79, 140, 255, 0.08);
+  padding: 2rem 1.5rem;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.blog-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(79, 140, 255, 0.16);
+}
+.blog-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #4f8cff;
+}
+.blog-meta {
+  font-size: 0.95rem;
+  color: #6c757d;
+  margin-bottom: 1.2rem;
+}
+.read-more {
+  margin-top: auto;
+  color: #fff;
+  background: #4f8cff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.read-more:hover {
+  background: #2563eb;
+}
+.no-articles {
+  font-size: 1.2rem;
+  color: #b91c1c;
+  text-align: center;
+  width: 100%;
+}
+.footer {
+  width: 100%;
+  background: #232336;
+  color: #fff;
+  text-align: center;
+  padding: 0.6rem 0 0.5rem 0;
+  position: static;
+  font-size: 1.05rem;
+  box-shadow: 0 -2px 12px rgba(79, 140, 255, 0.08);
+  z-index: 100;
+  margin-top: 2rem;
+}
+.footer p {
+  margin: 0;
+  font-weight: 500;
+}
+@media (max-width: 700px) {
+  .blog-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1rem 0.5rem;
+  }
+  .blog-card {
+    width: 95vw;
+    padding: 1.2rem 0.8rem;
+  }
+  .header h1 {
+    font-size: 2rem;
+  }
+  .footer {
+    font-size: 0.98rem;
+    padding: 0.5rem 0 0.4rem 0;
+  }
+}

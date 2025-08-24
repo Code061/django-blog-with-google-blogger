@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }} | Blog</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'result.css' %}" />
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <a class="back-home" href="{% url 'home' %}">← Home</a>
+    </nav>
+    <main class="article-container">
+      <article class="article-card">
+        <h1 class="article-title">{{ title }}</h1>
+        <div class="article-meta">Post ID: {{ id }}</div>
+        <hr class="divider" />
+        <section class="article-content">{{ content|safe }}</section>
+      </article>
+    </main>
+    <br><br>
+    <footer class="footer">
+      <p>&copy; {{ now|date:'Y' }} SHV. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

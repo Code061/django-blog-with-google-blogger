@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home.css' %}" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Welcome to the Blog</h1>
+      <p class="subtitle">Discover the latest articles and stories</p>
+    </header>
+    <main class="blog-list">
+      {% for item in items %}
+      <div class="blog-card">
+        <h2 class="blog-title">{{ item.title }}</h2>
+        <p class="blog-meta">Post ID: {{ item.id }}</p>
+        <a class="read-more" href="{% url 'result' id=item.id %}">Read more &rarr;</a        >
+      </div>
+      {% empty %}
+      <p class="no-articles">No articles found.</p>
+      {% endfor %}
+    </main>
+    <br><br>
+    <footer class="footer">
+      <p>&copy; {{ now|date:'Y' }} SHV. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
