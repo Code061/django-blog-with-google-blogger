@@ -2,7 +2,7 @@ from django.shortcuts import render # type: ignore
 import requests  # type: ignore
 
 URL=f'https://www.googleapis.com/blogger/v3/blogs/2399953/posts'
-API_KEY = '##################################' #Get API and paste here 
+API_KEY = '#' #Get API and paste here IN FORM OF STRING
 parameters = {
     'max_results':30,
     'fields': 'items',
